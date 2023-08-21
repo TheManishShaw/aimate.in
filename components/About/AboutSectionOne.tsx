@@ -51,7 +51,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="wow fadeInUp  relative mx-auto  aspect-[25/24] w-[80%] lg:mr-0">
                 <Image
-                  src="/images/about/machine-learning.png "
+                  src="/images/about/machine-learning.png"
                   alt="about-image"
                   fill
                   className="mx-auto lg:mr-0"
