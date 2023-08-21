@@ -102,7 +102,7 @@ const Header = () => {
                   }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map(({ menuItem, index }: any) => (
+                    {menuData.map((menuItem, index) => (
                       <li key={menuItem.id} className="group relative">
                         {menuItem.path ? (
                           <Link
@@ -132,15 +132,16 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map(({ submenuItem }: any) => (
-                                <Link
-                                  href={submenuItem.path}
-                                  key={submenuItem.id}
-                                  className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
-                                >
-                                  {submenuItem.title}
-                                </Link>
-                              ))}
+                              {menuItem &&
+                                menuItem?.submenu?.map((submenuItem) => (
+                                  <Link
+                                    href={submenuItem.path!}
+                                    key={submenuItem.id}
+                                    className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                                  >
+                                    {submenuItem.title}
+                                  </Link>
+                                ))}
                             </div>
                           </>
                         )}

@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-
-import ModalVideo from "react-modal-video";
+// import ModalVideo from "react-modal-video";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
@@ -47,7 +46,7 @@ const Video = () => {
           </div>
         </div>
       </div>
-
+      {/* 
       <ModalVideo
         channel="youtube"
         autoplay={true}
@@ -55,7 +54,7 @@ const Video = () => {
         isOpen={isOpen}
         videoId="al7EYfWKuVg"
         onClose={() => setOpen(false)}
-      />
+      /> */}
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
         <img src="/images/video/shape.svg" alt="shape" className="w-full" />
