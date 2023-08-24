@@ -101,13 +101,13 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="block lg:flex lg:space-x-6">
                     {menuData.map((menuItem, index) => (
                       <li key={menuItem.id} className="group relative">
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className={`flex rounded-full py-2 px-2 text-base text-dark  group-hover:!bg-primary  group-hover:text-white dark:!bg-opacity-30 dark:text-white lg:mr-0 lg:inline-flex lg:py-1 lg:px-3`}
                           >
                             {menuItem.title}
                           </Link>
@@ -115,7 +115,7 @@ const Header = () => {
                           <>
                             <a
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+                              className="flex cursor-pointer items-center justify-between rounded-full py-2 text-base text-dark group-hover:!bg-primary group-hover:text-white dark:text-white lg:mr-0 lg:inline-flex lg:py-1 lg:px-2"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -137,7 +137,7 @@ const Header = () => {
                                   <Link
                                     href={submenuItem.path!}
                                     key={submenuItem.id}
-                                    className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                                    className="block rounded py-2.5 text-sm text-dark hover:underline hover:opacity-70 dark:text-white lg:px-3"
                                   >
                                     {submenuItem.title}
                                   </Link>
@@ -151,7 +151,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <button className="rounded-lg bg-primary px-6 py-3 font-semibold capitalize text-white">
+                <button className="rounded-lg bg-primary px-6 py-1 text-sm font-normal capitalize text-white sm:text-sm sm:font-normal md:py-2 lg:py-3">
                   OTS Datasets
                 </button>
                 <div>
